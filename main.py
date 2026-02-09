@@ -6,6 +6,7 @@ import sys
 pygame.init()
 
 # Paramètres
+
 TAILLE_CASE = 10
 grille = [[False]*100 for _ in range(100)]
 lignes = len(grille)
@@ -22,7 +23,9 @@ BLANC = (255, 255, 255)
 NOIR = (0, 0, 0)
 BLEU = (50, 150, 255)
 
+
 grille[2][2] = True
+
 
 clock = pygame.time.Clock()
 CYCLE_EVENT = pygame.USEREVENT + 1
