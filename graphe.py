@@ -10,6 +10,9 @@ class graphe:
     def all_summit(self, s):
         return self.all_summit[s][1]  ## renvoie la liste des voisins du sommet
     
+    def infect(self, s):
+        self.all_summit[s][0] = True
+
     def is_neighbors(self, s1, s2):
         return s1 in self.all_summit[s2][1]
     
