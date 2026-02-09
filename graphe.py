@@ -13,6 +13,9 @@ class graphe:
     def is_neighbors(self, s1, s2):
         return s1 in self.neighbors[s2][1]
     
+    def is_infected(self,s):
+        return self.neighbors[s][0]
+    
     def __str__(self):
         return f"{self.neighbors}"
     
@@ -21,3 +24,6 @@ bite = graphe(["A", "B", "C"])
 print(bite)
 bite.append_neighbors("A", ["B", "C"])
 print(bite)
+
+print(bite.is_infected("A"))
+
