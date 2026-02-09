@@ -1,23 +1,23 @@
 class graphe:
     def __init__(self, sommet):
-        self.neighbors = dict() ## dico regroupant tous les sommets du graphe, clés sont les sommets et valeur un dico voir plus bas 
+        self.all_summit = dict() ## tous les sommets du graphe, clés sont les sommets et valeur un dico 
         for s in sommet:
-            self.neighbors[s] = [False] ## clés sont les voisins et valeurs une liste format [True/False, [voisins]]
+            self.all_summit[s] = [False] ## clés sont les voisins et valeurs une liste format [True/False, [voisins]]
 
     def append_neighbors(self, s, neighbors):
-        self.neighbors[s].append(neighbors)
+        self.all_summit[s].append(neighbors)
                                 
-    def neighbors(self, s):
-        return self.neighbors[s][1]  ## renvoie la liste des voisins du sommet 
+    def all_summit(self, s):
+        return self.all_summit[s][1]  ## renvoie la liste des voisins du sommet
     
     def is_neighbors(self, s1, s2):
-        return s1 in self.neighbors[s2][1]
+        return s1 in self.all_summit[s2][1]
     
     def is_infected(self,s):
-        return self.neighbors[s][0]
+        return self.all_summit[s][0]
     
     def __str__(self):
-        return f"{self.neighbors}"
+        return f"{self.all_summit}"
     
 
 bite = graphe(["A", "B", "C"])
