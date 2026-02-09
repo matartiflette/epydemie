@@ -8,7 +8,8 @@ pygame.init()
 # Paramètres
 
 TAILLE_CASE = 30
-grille = [[False]*10 for _ in range(10)]
+TAILLE_GRILLE = 10
+grille = [[False]*TAILLE_GRILLE for _ in range(TAILLE_GRILLE)]
 lignes = len(grille)
 colonnes = len(grille[0])
 
@@ -39,7 +40,7 @@ while True:
             sys.exit()
 
         if event.type == CYCLE_EVENT:
-            cycle(grille)
+            cycle(grille, TAILLE_GRILLE)
 
         screen.fill(BLANC)
 

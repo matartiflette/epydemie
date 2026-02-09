@@ -35,9 +35,9 @@ def get_contamine(grille,taille_x,taille_y):
     return liste
 
 
-def cycle(grille):
+def cycle(grille, TAILLE_GRILLE):
 
-    liste_contamine = get_contamine(grille, 10, 10)
+    liste_contamine = get_contamine(grille, TAILLE_GRILLE, TAILLE_GRILLE)
     a_contaminer = []
 
     for element in liste_contamine:
