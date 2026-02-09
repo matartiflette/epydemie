@@ -7,8 +7,8 @@ pygame.init()
 
 # Paramètres
 
-TAILLE_CASE = 10
-grille = [[False]*100 for _ in range(100)]
+TAILLE_CASE = 30
+grille = [[False]*10 for _ in range(10)]
 lignes = len(grille)
 colonnes = len(grille[0])
 
