@@ -1,5 +1,3 @@
-
-
 def show_grille(lst):
     for elt in lst:
         print(elt)
